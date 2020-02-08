@@ -12,4 +12,14 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .styles([
+        'resources/assets/vendor/bootstrap/css/bootstrap.min.css',
+        'resources/assets/vendor/fontawesome/css/all.min.css',
+        'resources/assets/chatbox-template/css/styles.css',
+    ], 'public/css/inbox.css')
+    .scripts([
+        'resources/assets/vendor/jquery/jquery.min.js',
+        'resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
+        'resources/assets/vendor/fontawesome/js/all.min.js',
+    ], 'public/js/inbox.js');
